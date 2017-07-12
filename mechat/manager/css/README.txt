@@ -1,0 +1,1 @@
+In this folder is stored the stylesheets of the meChat Manager.

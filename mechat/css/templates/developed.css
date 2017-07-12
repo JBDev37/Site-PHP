@@ -1,0 +1,167 @@
+/* item styles for menu of the meChat */
+
+/* user picture */
+.chatbox-menu-picture
+{
+    height: 32px; /* default height */
+    width: 32px; /* default width */
+    margin: 4px;
+    border: 0px #ccc solid; /* default border */
+    border-radius: 1px; /* default border radius */
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    float: left;
+}
+
+/* user info */
+.chatbox-menu-info
+{
+    float: left;
+    margin-left: 0px;
+    width: calc(100% - 90px);
+}
+
+    /* name */
+.chatbox-menu-info .chatbox-menu-name
+{
+    color: #424242; /* default font color */
+    font-size: 12px; /* default font size */
+    font-weight: 500; /* default font weight */
+    float: left;
+    margin-left: 4px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* effect ellipsis - ex: Exampl... */
+    display: block;
+}
+
+    /* last message */
+.chatbox-menu-info .chatbox-menu-lastmessage
+{
+    font-size: 11px;  /* default font size */ 
+    font-weight: 100; /* default font weight */
+}
+
+    /* last message emoji */
+.chatbox-menu-info .chatbox-menu-lastmessage [data-mechat-emoji]
+{
+    width: 10px;  /* default width */ 
+    height: 10px; /* default height */
+}
+
+    /* no space mode (used in the absence of .chatbox-menu-lastmessage) */
+.chatbox-menu-info.chat-nospace
+{
+    height: 40px;
+}
+.chatbox-menu-info.chat-nospace .chatbox-menu-name
+{
+    line-height: 40px;
+}
+
+/* user status */
+.chatbox-menu-status
+{
+    float: right;
+    line-height: 40px;
+    width: 50px;
+    text-align: center;    
+    font-size: 11px; /* default font size */
+    color: #9E9E9E; /* default font color */
+}
+.chatbox-menu-status.online
+{
+    font-size: 32px;
+    color: #53C166; /* default font color for online */
+}
+.chatbox-menu-status.offline
+{
+    font-size: 32px;
+    color: #B9B9B9; /* default font color for offline */
+}
+
+/* style for the label and input contained in content tab */
+.me-chat-box-manager-content input[type='checkbox']
+{
+    margin: 0;
+    margin-left: 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+.me-chat-box-manager-content label
+{
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 38px;
+    margin-left: 5px;
+    color: #666666;
+}
+
+/* media queries */
+
+    /* if the resolution is less than 590px */
+@media  screen and  (max-width: 590px)  {
+    
+    /* improve mobile experience */
+    
+        /* increase the size of the profile picture */
+    .chatbox-menu-picture
+    {
+        width: 50px;
+        height: 50px;
+    }
+    
+        /* increasing the width of the information of the user  */
+    .chatbox-menu-info {
+        width: calc(100% - 110px);
+    }
+    
+        /* increase the size of the name */
+    .chatbox-menu-info .chatbox-menu-name
+    {
+        font-size: 15px;
+    }
+    
+        /* increase the size of the last message */
+    .chatbox-menu-info .chatbox-menu-lastmessage    
+    {
+        font-size: 12px;
+    }
+
+        /* increase the size of the last message emoji */
+    .chatbox-menu-info .chatbox-menu-lastmessage [data-mechat-emoji]
+    {
+        width: 12px;
+        height: 12px;
+    }    
+    
+        /* increase the size of  (no space mode) */  
+    .chatbox-menu-info.chat-nospace
+    {
+        height: 60px;
+    }
+    .chatbox-menu-info.chat-nospace .chatbox-menu-name
+    {
+        line-height: 60px;
+    }
+    
+        /* increase the size of the user status */
+    .chatbox-menu-status
+    {
+        line-height: 60px;
+        font-size: 13px;
+    }
+
+        /* increase the size of label contained in content tab */
+    .me-chat-box-manager-content  label
+    {
+        font-size: 15px;
+        line-height: 55px;
+    }
+    
+}

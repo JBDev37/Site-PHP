@@ -1,0 +1,165 @@
+## [1.4] - 2016-08-09
+- New style.
+- Bugs fixed.
+- Store hidden chatboxes.
+
+### Changed
+#### Modified properties (Chatboxes Properties) (old => new)
+* hidden			displayed
+
+#### Added properties (Chatboxes Properties)
+* displayed - Is displayed.
+* hidden - Is hidden.
+
+#### Removed properties (Javascript & config.json)
+* popupimage_button_download
+
+### Changed files
+* ALL
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.3b] - 2016-07-19
+- session_status() was replaced by session_id() in the file "mechat/php/functions.php".
+- Improved attachment (image and youtube) style.
+
+### Changed files
+* mechat/css/mechat.css
+* mechat/css/mechat/templates/developed.css
+* mechat/js/mechat.js
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.3] - 2016-06-13
+- Formatting text with line breaks.
+- Formatting text with emoji images.
+- Youtube video preview.
+- Messages with user picture.
+- Transformation of emoji characters to images.
+- Fixed the slow with update of tabs.
+
+### Added (Javascript Only)
+* me_chat_settings.box_message_userpicture - Show user image.
+* me_chat_settings.box_contenteditable - Use attr "contenteditable" instead of <textarea> (This allows: Transform unicode characters in images).
+* me_chat_strings.box_properties_lastmessage_yt_initials - Transform youtube iframe tag for the property (last received message) of the chatbox.
+
+### Changed files
+* mechat/css/mechat.css
+* mechat/css/mechat/templates/developed.css
+* mechat/js/mechat.js
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.2] - 2016-04-15
+- Properties organized.
+- Functions organized.
+- The configuration of the "path" is relative to the site root.
+
+### Added (PHP Only)
+* meChat_CountUsers() - Return total users.
+* meChat_CountRecentUsers($minutes = 10) - Returns the total of recent users.
+* meChat_CountConversations() - Returns the total of conversations.
+* meChat_CountFriendships() - Returns the total of friendships.
+* meChat_CountMessages($from_chatID = null, $to_chatID = null) - Returns the total of messages.
+* meChat_ListUsers($where = null, $order = null, $page = 0, $max_results = 10) - Return the users list.
+* meChat_ListMessages($where = null, $order = null, $page = 0, $max_results = 10) - Return the messages list. 
+* meChat_ListConversations($where = null, $order = null, $page = 0, $max_results = 10) - Returns the conversations list.
+* meChat_ListFriendships($where = null, $order = null, $page = 0, $max_results = 10) - Returns the friendships list.
+* meChat_ListRecentUsers($minutes = 10, $where = null, $order = null, $page = 0, $max_results = 10) - Return the recent users list.
+
+### Changed
+#### Modified properties (Javascript & config.json) (old => new)
+* box_allow_status			box_header_status
+* box_color_background_received	box_color_received_background
+* box_color_background_sent		box_color_sent_background
+* box_color_message_received	box_color_received_text
+* box_color_message_sent		box_color_sent_text
+* box_alert_flash			box_alert_header_flash
+* box_alert_flash_color		box_alert_header_flash_color
+* timeseparator			box_message_timeseparator
+* timeseparator_today		box_message_timeseparator_today
+* timeseparator_anotherday		box_message_timeseparator_anotherday
+* timeseparator_anotheryear		box_message_timeseparator_anotheryear
+* message_popoverdate		box_message_popoverdate
+* message_date			box_message_date
+* message_seen			box_message_seen
+* box_menu_title			menubox_title
+* button_load			box_button_loadoldmessages
+* lastmessage_image		box_properties_lastmessage_img_initials
+* textarea_message			box_textarea
+* alert_received			box_alert_received
+* alert_loadingoldmessages		box_alert_loadingoldmessages
+* button_download			popupimage_button_download
+* error_sendmessage		box_error_sendmessage
+* error_imageupload_maxsize		box_error_imageupload_maxsize
+* box_mobile			box_allow_mobile
+* lastbox_message_seen		box_lastmessage_seen
+
+#### Added properties (Javascript Fix)
+* box_allow_imageupload_maxsize
+* box_error_imageupload_maxsize
+* box_lastmessage_seen 
+
+#### Removed properties (Javascript & config.json)
+* itemid
+
+#### Modified functions (PHP only) (old => new)
+* meChatUser_Add			meChat_Add
+* meChatUser_AddFriend		meChat_AddFriend
+* meChatUser_RemoveFriend		meChat_RemoveFriend
+* meChatUser_Remove		meChat_Remove
+* meChatUser_Exists		meChat_Exists
+* meChatUser_Friendship		meChat_Friendship
+* meChatUser_Identifier		meChat_Identifier
+* meChatUser_Login		meChat_Login
+* meChatUser_Update		meChat_Update
+* meChatUser_Logged		meChatLogged
+* meChatUser_Logout		meChatLogged_Logout
+* meChat_recentlyMessages		meChatLogged_recentlyMessages
+* meChat_openChat			meChatLogged_openChat
+* meChat_markAllAsRead		meChatLogged_markAllAsRead
+* meChat_closeChat		meChatLogged_closeChat
+* meChat_openedChat		meChatLogged_openedChat
+* meChatUser_Friends		meChatLogged_Friends
+* meChat_receiveMessage		meChatLogged_receiveMessage
+
+### Changed files
+* ALL
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.1] - 2016-03-27
+### Added
+* Function meChat_Date() - This function was created to format the string with timestamp.
+* Chatbox Property "lastmessage_ajax" - Last message with data returned via AJAX (object).
+* me_chat_settings.timeseparator - Enable time separator.
+* me_chat_settings.message_popoverdate - Enable message popover (event: mouseover).
+* me_chat_settings.message_date - Enable date of the message (event: tap) (mobile).
+* me_chat_settings.message_seen - Enable seen date of the sent message (mobile - event: tap) and (desktop - last message).
+* me_chat_strings.message_popoverdate - Format the date of the message popover.
+* me_chat_strings.message_date - Format the date of message.
+* me_chat_strings.message_seen - Format the seen date of the message.
+* me_chat_strings.lastmessage_seen - Format the seen date of the last message.
+* me_chat_strings.timeseparator_today - Format time separator - Today.
+* me_chat_strings.timeseparator_anotherday - Format time separator - Another day.
+* me_chat_strings.timeseparator_anotheryear - Format time separator - Another year.
+
+### Changed
+* Function meChat_receiveMessage() - Added argument "$limit = 20" - Maximum results.
+* Function meChat_recentlyMessages() - Argument default "$minutes = 10".
+
+### Changed files
+* mechat/php/functions.php
+* mechat/php/templates/ajax.receivemessage.php
+* mechat/css/mechat.css
+* mechat/css/mechat/templates/developed.css
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.0b] - 2016-03-22
+- Improved image upload.
+
+[---------------------------------------------------------------------------------------------------------------------------]
+
+## [1.0] - 2016-03-21
+- Initial Release.

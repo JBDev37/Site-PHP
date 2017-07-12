@@ -1,0 +1,1 @@
+In this folder is stored the icons of the meChat.

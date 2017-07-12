@@ -1,0 +1,69 @@
+{
+	"me_chat_database":
+	{
+		"host": "localhost",
+		"database": "mechat",
+		"user": "root",
+		"password": ""
+	},
+	"me_chat_imageupload":
+	{
+		"path": "\/mechat\/uploadimages\/",
+		"extension": ".png",
+		"maxsize": "1.5",
+		"message_success": "Your image was sent successfully.",
+		"message_failed": "Failed to send image.",
+		"message_notlogged": "Not logged in.",
+		"message_maxsize": "Maximum image size has been exceeded.",
+		"message_invalid": "This is not a valid image."
+	},
+	"me_chat_strings":
+	{
+		"menubox_title": "Messages",
+		"box_button_loadoldmessages": "Anciens messages",
+		"box_properties_lastmessage_img_initials": "(image)",
+		"box_textarea": "Ecrire...",
+		"message_popoverdate": "G:ia",
+		"message_date": "G:ia",
+		"message_seen": "\\Vue",
+		"lastmessage_seen": "\\Vue g:i A",
+		"box_alert_received": "Message reçu!",
+		"box_alert_loadingoldmessages": "Chargement...",
+		"box_error_sendmessage": "Erreur connection internet.",
+		"box_error_imageupload_maxsize": "Maximum image size has been exceeded."
+	},
+	"me_chat_settings":
+	{
+		"load_jquery": true,
+		"load_css": true,
+		"load_developed": true,
+		"box_update_timer": 3000,
+		"box_hidden": true,
+		"path": "\/mechat\/",
+		"box_allow_mobile": true,
+		"box_header_status": true,
+		"box_allow_emojis": true,
+		"box_allow_imageupload": false,
+		"box_allow_imageupload_maxsize": "1.5",
+		"box_color": "#4080ff",
+		"box_color_received_background": "#f1f0f0",
+		"box_color_sent_background": "#4080ff",
+		"box_color_received_text": "#4b4f56",
+		"box_color_sent_text": "#ffffff",
+		"box_width": 260,
+		"box_spacebetween": 15,
+		"box_betweencorner": 20,
+		"box_scrolllock": true,
+		"box_alert_messagereceived": true,
+		"box_alert_header_flash": true,
+		"box_alert_header_flash_color": "#0D47A1",
+		"box_alert_sound": true,
+		"box_alert_sound_file": "1.mp3",
+		"box_message_timeseparator": true,
+		"box_message_popoverdate": true,
+		"box_message_date": true,
+		"box_message_seen": true,
+		"cookies_name": "meccookie",
+		"cookies_expires": 365
+	}
+}
