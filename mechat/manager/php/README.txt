@@ -1,0 +1,1 @@
+In this folder is stored the PHP files of the meChat Manager.

@@ -1,0 +1,1 @@
+In this folder is stored the javascripts of the meChat Manager.

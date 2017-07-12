@@ -1,0 +1,1 @@
+In this folder is stored the images and sounds of the meChat.

@@ -1,0 +1,1 @@
+In this folder is stored include files of the meChat Manager.
