@@ -1,1 +1,0 @@
-In this folder are stored the "glyphicons" of the Bootstrap.
